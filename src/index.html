@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subir Archivos a S3</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <div class="row mt-5 justify-content-center">
+        <div class="col-8">
+          <div class="card">
+            <div class="card-body">
+              <h1>Gestión de Archivos y lambda en S3 </h1>
+
+              <div class="mt-5">
+                <div class="mt-3">
+                  <label for="file">Seleccionar el archivo: </label>
+                  <input class="form-control" type="file" id="file" />
+                </div>
+                <div class="mt-3">
+                  <label for="text">Contenido del archivo de texto: </label>
+                  <textarea class="form-control" id="text" rows="5"></textarea>
+                </div>
+
+                <div class="mt-3 d-flex justify-content-center">
+                  <button type="button" class="btn btn-success" id="btnSend">
+                    Subir a bukect S3
+                  </button>
+                </div>
+              </div>
+
+              <div class="mt-5">
+                <h3>Archivos en el Bucket</h3>
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">FileName</th>
+                      <th scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table" >
+
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../dist/bundle.js"></script>
+    <!-- <script src="./index.js"></script> -->
+  </body>
+</html>

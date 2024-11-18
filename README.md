@@ -217,3 +217,37 @@ aws --endpoint-url=http://localhost:4566 s3 cp s3://exam-review/processed/new/ex
 aws --endpoint-url=http://localhost:4566 s3 cp s3://exam-review/processed/new/example.txt-line-3.txt - | cat
 aws --endpoint-url=http://localhost:4566 s3 cp s3://exam-review/processed/new/example.txt-line-4.txt - | cat
 ```
+
+# Repaso con interfaz
+
+#### Instalar lib-storage
+```
+npm install @aws-sdk/lib-storage
+```
+
+#### Instalar webpack
+```
+npm install --save-dev webpack webpack-cli
+```
+
+#### Compilar proyecto luego de cambios
+```
+npx webpack --config webpack.config.js
+```
+
+#### Activar cors 
+
+```
+aws --endpoint-url=http://localhost:4566 s3api put-bucket-cors --bucket exam-review \
+  --cors-configuration '{
+    "CORSRules": [
+      {
+        "AllowedOrigins": ["*"],
+        "AllowedMethods": ["GET", "POST", "PUT", "DELETE"],
+        "AllowedHeaders": ["*"],
+        "ExposeHeaders": []
+      }
+    ]
+  }'
+```
+

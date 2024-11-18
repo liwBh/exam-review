@@ -1,5 +1,5 @@
 {
-  "name": "exam-review",
+  "name": "function",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -11,11 +11,6 @@
   "description": "",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.665.0",
-    "@aws-sdk/lib-storage": "^3.665.0",
     "fs": "^0.0.1-security"
-  },
-  "devDependencies": {
-    "webpack": "^5.95.0",
-    "webpack-cli": "^5.1.4"
   }
 }
